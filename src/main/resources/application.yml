@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 2
+        readTimeout: 2
+
+constants:
+  host:
+    remote-server: 127.0.0.1:8080
